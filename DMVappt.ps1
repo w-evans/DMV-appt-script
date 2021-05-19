@@ -58,8 +58,6 @@ while ($curler.length -le 4) {
 
 #if $curler was filled with data it will alert the user and print out the data (date/time of appt)
 if ($curler.length -ge 4) {
-    $curler.ToString().Remove(0,10) #reformatting output of content returned
-    #$curler.Remove(0,0) #reformatting output of content returned
     Write-Host "DING DING DING"
     [System.Console]::Beep()
     Write-Host "Available appointment time @ " $curler 
