@@ -50,6 +50,10 @@ while ($curler.length -le 4) {
     #location 4 - sahara
     Write-Host 'Checking Sahara DMV...'
     Curler -dmv_location $sahara_dmv
+    
+    #console log current date/time for tracking
+    $dt = Get-Date -Format 'MM/dd/yy HH:mm'
+    $dt_out = Write-Host 'Current Date/Time: '$dt
 } 
 
 #if $curler was filled with data it will alert the user and print out the data (date/time of appt)
